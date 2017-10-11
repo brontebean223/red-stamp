@@ -55,7 +55,7 @@ u {
 
 .rectangle-box {
   margin-bottom: 20px;
-  padding: 25px 50px;
+  padding: 25px 20px;
   @extend .box;
   p {
     @extend .p-class-2;
@@ -170,7 +170,6 @@ u {
       letter-spacing: -1px;
     }
     .growth-icon {
-      padding-top: 12px;
       display: block;
       margin: 0 auto;
     }
@@ -190,6 +189,8 @@ u {
     .rs-blog-illustration {
       height: 98px;
       padding-bottom: 10px;
+      display: block;
+      margin: 0 auto;
     }
     h5 {
       width: 250px;
@@ -212,7 +213,7 @@ u {
 ============================================= */
 //Footer 
 .rs-footer {
-  padding: 20px $rs-padding-left 20px $rs-padding-right;
+  padding: 28px $rs-padding-left 28px $rs-padding-right;
   border-bottom: 1px solid $medium-gray;
   p {
     color: rgba(133,147,158,.5);
@@ -231,17 +232,18 @@ u {
 
 //Secondary Footer
 .rs-secondary-footer {
-  padding: 14px $rs-padding-left 60px $rs-padding-right;
+  padding: 35px $rs-padding-left 70px $rs-padding-right;
   ul.menu {
     list-style-type: none;
-    text-align: center;
     margin-bottom: 10px;
-    display: inline;
+    text-align: center;
     li {
       text-transform: uppercase;
       font-size: 12px;
       letter-spacing: 0.5px;
+      margin: 0 10px;
       color: $dark-blue;
+      display: inline;
     }
   } 
   .copyright {
@@ -309,6 +311,14 @@ u {
   //Main Container
   .rs-main-container {
     margin: 60px auto;
+  }
+
+  .rectangle-box {
+    padding: 25px 50px;
+  }
+
+  .growth-icon {
+    padding-top: 12px;
   }
   
   //footer
