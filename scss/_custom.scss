@@ -1,0 +1,320 @@
+/* Imports
+============================================= */
+@import 'settings';
+
+/* General Styles
+============================================= */
+u {    
+  border-bottom: 1px dashed $dull-blue;
+  text-decoration: none;
+}
+
+.accent-color {
+  color: $brand-color-1;
+}
+
+.box {
+  border: 1px solid $medium-gray;
+  background-color: $white;
+}
+
+.p-class-1 {
+  font-size: 14px;
+  line-height: 1.36;
+  color: rgba(10, 39, 60,.7);
+  margin-bottom: 13px;
+  letter-spacing: -0.3px;
+}
+
+.p-class-2 {
+  font-size: 12px;
+  line-height: 1.36;
+  color: $dull-blue;
+  margin-bottom: 6px;
+}
+
+.accent-text {
+  font-size: 10px;
+  font-family: $body-font-family-bold;
+  color: $bright-blue !important;
+  text-transform: uppercase;
+}
+
+.content-box {
+  background-color: $white;
+  .accent-title {
+    @extend .accent-text;
+  }
+  p {
+    @extend .p-class-1;
+  }
+  h4 {
+    font-family: $headline-font-family;
+  }
+}
+
+.rectangle-box {
+  margin-bottom: 20px;
+  padding: 25px 50px;
+  @extend .box;
+  p {
+    @extend .p-class-2;
+  }
+}
+
+.rectangle-box:last-child {
+  margin-bottom: 0px;
+}
+
+.blog-box {
+  @extend .box;
+  padding-bottom: 20px;
+  .accent-title {
+    @extend .accent-text;
+  }
+  p {
+    @extend .p-class-2;
+  }
+  h5 {
+    font-family: $headline-font-family;
+  }
+}
+
+/* Container Styles
+============================================= */
+//Main Container
+.rs-main-container {
+  max-width: $large-width;
+  background-color: $white;
+  margin: 0px auto;
+  border: 1px solid $medium-gray;
+  h3 {
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+  h4 {
+    margin-bottom: 13px;
+  }
+  h5 {
+    margin-bottom: 11px;
+  }
+  h6 {
+    margin-bottom: 20px;
+    font-family: $body-font-family;
+  }
+}
+
+.rs-lightbg {
+  background-color: $light-blue;
+}
+
+//Header Container
+.rs-header {
+  padding: 14px $rs-padding-left 14px $rs-padding-right;
+  .rs-logo {
+    width: 141px;
+    height: 36px;
+    object-fit: contain;
+  }
+  p {
+    font-size: 10px;
+    color: $brand-color-1;
+    margin: 8px 0 0 0;
+    text-align: right;
+  }
+}
+
+//Intro Container
+.intro-container {
+  padding: 35px $rs-padding-left 50px $rs-padding-right;
+  h1 {
+    line-height: 1.02;
+    letter-spacing: -0.4px;
+    color: $dark-blue;
+    margin-bottom: 20px;
+  }
+  p {
+    line-height: 1.21;
+    color: $dull-blue;
+  }
+}
+
+//Feature Image Container
+.feature-image-container {
+  padding: 0 $rs-padding-left 0 $rs-padding-right;
+}
+
+//Feature Text Container
+.feature-text-container {
+  .content-box {
+    margin: 0 $rs-padding-left 0 $rs-padding-right;
+    padding: 40px $rs-padding-left 37px $rs-padding-right;
+  }
+  hr {
+    width: 64px;
+    border-bottom: 1px solid rgba(133,147,158,.5);
+    margin: 35px 0 0 0;
+  }
+}
+
+//Action Container
+.action-container {
+  border-bottom: 1px solid $medium-gray;
+  .rectangle-box {
+    a {
+      @extend .accent-text;
+    }
+    h5 {
+      font-family: $body-font-family-bold;
+      letter-spacing: -1px;
+    }
+    .growth-icon {
+      padding-top: 12px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.action-container, .blog-container {
+  padding: 40px $rs-padding-left 40px $rs-padding-right;
+  h3, h6 {
+    text-align: center;
+  }
+}
+
+//Blog Container
+.blog-container {
+  .blog-box {
+    .rs-blog-illustration {
+      height: 98px;
+      padding-bottom: 10px;
+    }
+    h5 {
+      width: 250px;
+    }
+    p {
+      color: rgba(10, 39, 60,.7);
+    }
+  }
+}
+
+//CTA Container
+.cta-container {
+  padding: 25px 50px;
+  background-color: $brand-color-1;
+  color: $white;
+  text-align: center;
+}
+
+/* Footer Styles
+============================================= */
+//Footer 
+.rs-footer {
+  padding: 20px $rs-padding-left 20px $rs-padding-right;
+  border-bottom: 1px solid $medium-gray;
+  p {
+    color: rgba(133,147,158,.5);
+    padding-top: 8px;
+  }
+  .social-icons {
+    .fa-stack {
+      color: $medium-gray;
+      transition: background-color 0.25s ease-out, color 0.25s ease-out;
+      &:hover {
+        color: mix(black, $medium-gray, 15%);
+      }
+    }
+  }
+}
+
+//Secondary Footer
+.rs-secondary-footer {
+  padding: 14px $rs-padding-left 60px $rs-padding-right;
+  ul.menu {
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 10px;
+    display: inline;
+    li {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      color: $dark-blue;
+    }
+  } 
+  .copyright {
+    text-align: center;
+    opacity: 0.5;
+    //cross browser opacity
+    -khtml-opacity: 0.5;
+    -moz-opacity: 0.5;
+    filter: alpha(opacity=50);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    font-size: 12px;
+    color: $dull-blue;
+    padding-bottom: 35px;
+  }
+  .rs-icon svg {
+    margin: auto;
+    display: block;
+  }
+}
+
+/* Media Queries
+============================================= */
+//Small
+@media screen and (max-width: 39.9375em) {
+  //intro
+  .intro-container {
+    padding: 30px $rs-padding-left 40px $rs-padding-right;
+    img {
+      display: block;
+      margin: auto;
+    }
+  }
+  //footer
+  .rs-footer {
+    text-align: center;
+    p {
+      padding-bottom: 13px;
+    }
+  }
+  .blog-container {
+    .blog-box {
+      margin-bottom: 20px;
+    }
+  }
+  .rs-header {
+    border-bottom: 1px solid $medium-gray;
+    padding-bottom: 8px;
+  }
+  .rs-header, .intro-container, .feature-image-container, .action-container, .blog-container, .cta-container, .rs-footer, .rs-secondary-footer {
+    padding-left: $rs-padding-left-sm;
+    padding-right: $rs-padding-right-sm;
+  }
+  .feature-text-container {
+    .content-box {
+      padding-left: $rs-padding-left-sm;
+      padding-right: $rs-padding-right-sm;
+      margin-left: $rs-padding-left-sm;
+      margin-right: $rs-padding-right-sm;
+    }
+  }
+}
+
+//Medium & Up
+@media screen and (min-width: 40em) {
+  //Main Container
+  .rs-main-container {
+    margin: 60px auto;
+  }
+  
+  //footer
+  .rs-footer {
+    .social-icons {
+      text-align: right;
+    }
+  }
+}
